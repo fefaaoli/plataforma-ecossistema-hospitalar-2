@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Observabilidade e Gestão do Ecossistema Tecnológico Hospitalar</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    @media print {
+      body { background-color: white !important; padding: 0 !important; }
+      .no-print { display: none !important; }
+      .shadow-xl { box-shadow: none !important; }
+      .border { border-color: #e2e8f0 !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 p-3 md:p-8 flex justify-center text-slate-800 antialiased">
+
+  <div class="w-full max-w-6xl bg-white rounded-3xl shadow-xl p-6 md:p-10 space-y-8 border border-slate-200">
+    
+    <!-- Cabeçalho Principal -->
+    <header class="border-b border-slate-200 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-100 text-teal-800 mb-2">
+          <i data-lucide="activity" class="w-3.5 h-3.5"></i> Arquitetura & Estratégia Hospitalar
+        </span>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          Plataforma de Observabilidade e Gestão do Ecossistema Tecnológico Hospitalar
+        </h1>
+      </div>
+      <button onclick="window.print()" class="no-print self-start md:self-auto inline-flex items-center gap-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-medium rounded-lg transition-colors shadow-sm">
+        <i data-lucide="printer" class="w-4 h-4"></i> Imprimir / Salvar PDF
+      </button>
+    </header>
+
+    <!-- Grid Superior: 1. Problema | 2. Pergunta Central & 3. Proposta -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- 1. Problema (Col 5) -->
+      <section class="lg:col-span-5 bg-slate-50/80 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-sm">1</span>
+            <h2 class="text-lg font-bold text-slate-900">Problema</h2>
+          </div>
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-3">
+            Os hospitais utilizam cada vez mais sistemas, tecnologias e equipamentos. Porém, essas ferramentas nem sempre estão integradas entre si ou alinhadas à rotina real dos profissionais.
+          </p>
+          <p class="text-xs text-slate-500 leading-relaxed mb-5">
+            Essa fragmentação dificulta a compreensão dos processos, aumenta a carga de trabalho e limita a capacidade dos gestores de identificar problemas e avaliar os resultados das tecnologias.
+          </p>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="flex items-start gap-3 text-xs text-slate-700 font-medium bg-white p-2.5 rounded-lg border border-slate-200/70">
+            <i data-lucide="layers" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
+            <span>Múltiplos sistemas para realizar uma mesma tarefa</span>
+          </div>
+          <div class="flex items-start gap-3 text-xs text-slate-700 font-medium bg-white p-2.5 rounded-lg border border-slate-200/70">
+            <i data-lucide="database" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
+            <span>Informações distribuídas em diferentes plataformas</span>
+          </div>
+          <div class="flex items-start gap-3 text-xs text-slate-700 font-medium bg-white p-2.5 rounded-lg border border-slate-200/70">
+            <i data-lucide="copy" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
+            <span>Registros duplicados, etapas manuais e retrabalho</span>
+          </div>
+          <div class="flex items-start gap-3 text-xs text-slate-700 font-medium bg-white p-2.5 rounded-lg border border-slate-200/70">
+            <i data-lucide="alert-octagon" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
+            <span>Dificuldade para identificar gargalos e suas causas</span>
+          </div>
+          <div class="flex items-start gap-3 text-xs text-slate-700 font-medium bg-white p-2.5 rounded-lg border border-slate-200/70">
+            <i data-lucide="bar-chart-2" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
+            <span>Tecnologias disponíveis pouco utilizadas</span>
+          </div>
+          <div class="flex items-start gap-3 text-xs text-slate-700 font-medium bg-white p-2.5 rounded-lg border border-slate-200/70">
+            <i data-lucide="eye-off" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
+            <span>Falta de visão integrada dos processos e das tecnologias</span>
+          </div>
+          <div class="flex items-start gap-3 text-xs text-slate-700 font-medium bg-white p-2.5 rounded-lg border border-slate-200/70">
+            <i data-lucide="trending-down" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
+            <span>Dificuldade para avaliar custos, benefícios e resultados</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Direita: 2. Pergunta Central & 3. Proposta (Col 7) -->
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        
+        <!-- 2. Pergunta Central -->
+        <section class="bg-slate-50/80 border border-slate-200 rounded-2xl p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-sm">2</span>
+            <h2 class="text-lg font-bold text-slate-900">Pergunta central</h2>
+          </div>
+          <div class="flex items-start gap-4 mt-2">
+            <div class="w-12 h-12 rounded-2xl bg-teal-800 text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i data-lucide="help-circle" class="w-6 h-6"></i>
+            </div>
+            <p class="text-sm md:text-base font-bold text-slate-800 leading-snug">
+              Como compreender, gerenciar e melhorar a utilização das diferentes tecnologias da informação e comunicação no ambiente hospitalar, considerando sua relação com os profissionais, os processos e os resultados da instituição?
+            </p>
+          </div>
+        </section>
+
+        <!-- 3. Proposta -->
+        <section class="bg-slate-50/80 border border-slate-200 rounded-2xl p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-sm">3</span>
+              <h2 class="text-lg font-bold text-slate-900">Proposta</h2>
+            </div>
+            <p class="text-xs md:text-sm text-slate-700 font-medium mb-3 leading-relaxed">
+              Desenvolver uma plataforma de observabilidade e gestão do ecossistema tecnológico hospitalar, capaz de mapear como as tecnologias participam dos processos, identificar problemas operacionais e apoiar decisões de melhoria.
+            </p>
+            
+            <p class="text-xs text-slate-500 mb-3 font-semibold uppercase tracking-wider">A plataforma busca compreender:</p>
+            
+            <!-- Grid de Mapeamento da Proposta -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 bg-white p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700">
+              <div class="flex items-center gap-2">
+                <i data-lucide="users" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Quem participa</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-square" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Faz o quê</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="monitor" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Qual tecnologia</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="file-text" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Qual informação</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="brain-circuit" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Qual decisão</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Qual momento</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="git-merge" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Dependências</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="alert-triangle" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Dificuldades</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-teal-700 shrink-0"></i>
+                <span>Resultados</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 space-y-2">
+            <div class="flex items-start gap-2.5 bg-teal-50/70 p-3 rounded-xl border border-teal-200/80 text-xs text-teal-950">
+              <i data-lucide="info" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
+              <span><strong>Camada complementar:</strong> A proposta não substitui sistemas como MV, Pixeon, PACS ou outros. Ela funciona sobre o ecossistema tecnológico já existente.</span>
+            </div>
+            <div class="flex items-start gap-2.5 bg-slate-100 p-3 rounded-xl border border-slate-200 text-xs text-slate-700">
+              <i data-lucide="sparkles" class="w-4 h-4 text-slate-700 shrink-0 mt-0.5"></i>
+              <span><strong>Diferencial:</strong> Relacionar tecnologias, pessoas, processos e indicadores para compreender onde existem problemas, suas causas e oportunidades de melhoria.</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- 4. Como funciona -->
+    <section class="bg-slate-50/80 border border-slate-200 rounded-2xl p-6">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-sm">4</span>
+        <h2 class="text-lg font-bold text-slate-900">Como funciona</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <!-- 1. Mapear -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="w-7 h-7 rounded-full bg-teal-700 text-white text-xs font-bold flex items-center justify-center mb-3">1</div>
+            <h3 class="font-bold text-sm text-slate-900 mb-2">Mapear</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Visualizar como o trabalho realmente acontece no hospital, identificando atividades, profissionais, setores, sistemas, informações, decisões e dependências.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Analisar -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="w-7 h-7 rounded-full bg-teal-700 text-white text-xs font-bold flex items-center justify-center mb-3">2</div>
+            <h3 class="font-bold text-sm text-slate-900 mb-2">Analisar</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-2">
+              Identificar gargalos, tempos de espera, trocas de sistema, duplicidades, retrabalho e falhas de integração.
+            </p>
+            <p class="text-[11px] text-slate-500 border-t border-slate-100 pt-2">
+              Investiga causas tecnológicas, processuais ou organizacionais.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Priorizar -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="w-7 h-7 rounded-full bg-teal-700 text-white text-xs font-bold flex items-center justify-center mb-3">3</div>
+            <h3 class="font-bold text-sm text-slate-900 mb-2">Priorizar</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-2">
+              Avaliar o que tratar primeiro: frequência, impacto assistencial, eficiência, custos, riscos e esforço necessário.
+            </p>
+            <p class="text-[11px] text-slate-500 border-t border-slate-100 pt-2">
+              Apoia decisões conjuntas entre gestão, TI e assistência.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. Melhorar -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="w-7 h-7 rounded-full bg-teal-700 text-white text-xs font-bold flex items-center justify-center mb-3">4</div>
+            <h3 class="font-bold text-sm text-slate-900 mb-2">Melhorar</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-2">
+              Propor mudanças de fluxo, oportunidades de integração, eliminação de etapas e planejar intervenções.
+            </p>
+            <p class="text-[11px] text-slate-500 border-t border-slate-100 pt-2">
+              Explora cenários de melhoria antes de implementar.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Acompanhar -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="w-7 h-7 rounded-full bg-teal-700 text-white text-xs font-bold flex items-center justify-center mb-3">5</div>
+            <h3 class="font-bold text-sm text-slate-900 mb-2">Acompanhar</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Comparar indicadores antes e depois das intervenções, acompanhar a adesão às tecnologias e verificar se as mudanças melhoraram o processo global.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. O que o gestor visualiza -->
+    <section class="bg-slate-50/80 border border-slate-200 rounded-2xl p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-sm">5</span>
+        <h2 class="text-lg font-bold text-slate-900">O que o gestor visualiza</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Itens Visíveis -->
+        <div class="lg:col-span-7 space-y-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-700">
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="git-fork" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Tecnologias em cada processo hospitalar</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="users" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Profissionais e setores por tecnologia</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="repeat" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Circulação de dados entre sistemas e equipes</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="clock" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Onde ocorrem atrasos e interrupções</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="edit-3" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Etapas manuais e transferências de dados</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="help-circle" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Origem dos problemas (TI, processo ou gestão)</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="battery-low" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Tecnologias pouco utilizadas</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="graduation-cap" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Equipes que precisam de apoio/treinamento</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Problemas com maior impacto a priorizar</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-slate-200">
+              <i data-lucide="check-check" class="w-4 h-4 text-teal-700 shrink-0"></i>
+              <span>Melhorias realizadas e seus resultados</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indicadores Possíveis -->
+        <div class="lg:col-span-5 bg-teal-900 text-white rounded-xl p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-teal-200 font-bold text-xs uppercase tracking-wider mb-3">
+              <i data-lucide="gauge" class="w-4 h-4"></i> Indicadores Possíveis
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-1.5 text-xs text-teal-50">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>Tempo total de execução dos processos</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>Tempo de espera entre etapas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>Quantidade de registros duplicados</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>Frequência de trocas entre sistemas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>Número de transferências manuais de dados</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>Falhas e interrupções tecnológicas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>Adesão e utilização das tecnologias</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>Tempo em atividades administrativas</span>
+              </div>
+              <div class="flex items-center gap-2 font-semibold text-teal-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-300"></span>
+                <span>Evolução dos indicadores pós-intervenção</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Viabilidade e implantação -->
+    <section class="bg-slate-50/80 border border-slate-200 rounded-2xl p-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-sm">6</span>
+        <h2 class="text-lg font-bold text-slate-900">Viabilidade e implantação</h2>
+      </div>
+      <p class="text-xs text-slate-600 mb-5 leading-relaxed">
+        A plataforma pode ser desenvolvida e validada de forma gradual, começando por um processo hospitalar específico. O protótipo não precisa acessar sistemas reais nem utilizar dados de pacientes.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Protótipo -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="box" class="w-5 h-5 text-teal-700"></i>
+              <h3 class="font-bold text-sm text-slate-900">Protótipo</h3>
+            </div>
+            <p class="text-[11px] font-semibold text-teal-800 mb-3">Dados e fluxos simulados</p>
+            <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside leading-relaxed">
+              <li>Representação com diferentes profissionais e TI</li>
+              <li>Simulação de atividades, atrasos e retrabalho</li>
+              <li>Painel interativo de visualização e análise</li>
+              <li>Registro de problemas, causas e melhorias</li>
+              <li>Comparação de indicadores antes/depois</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Piloto -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="flask-conical" class="w-5 h-5 text-teal-700"></i>
+              <h3 class="font-bold text-sm text-slate-900">Piloto</h3>
+            </div>
+            <p class="text-[11px] font-semibold text-teal-800 mb-3">Aplicação em 1 processo real</p>
+            <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside leading-relaxed">
+              <li>Processo com múltiplas áreas e tecnologias</li>
+              <li>Mapeamento conjunto com equipes envolvidas</li>
+              <li>Validação da representação da rotina real</li>
+              <li>Identificação de problemas operacionais</li>
+              <li>Avaliação da utilidade das informações</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Evolução -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="trending-up" class="w-5 h-5 text-teal-700"></i>
+              <h3 class="font-bold text-sm text-slate-900">Evolução</h3>
+            </div>
+            <p class="text-[11px] font-semibold text-teal-800 mb-3">Integração gradual e ampliação</p>
+            <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside leading-relaxed">
+              <li>Incorporação de dados autorizados dos sistemas</li>
+              <li>APIs e padrões de interoperabilidade</li>
+              <li>Coleta automatizada de eventos e métricas</li>
+              <li>Expansão para novos processos e setores</li>
+              <li>Avanço nos recursos analíticos preditivos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-950 text-xs">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-700 shrink-0"></i>
+          <span>Segurança da informação, privacidade, controle de acesso e rastreabilidade considerados desde o início.</span>
+        </div>
+        <span class="font-semibold bg-emerald-200/70 text-emerald-900 px-3 py-1 rounded-full whitespace-nowrap">
+          Começar pequeno é parte da viabilidade.
+        </span>
+      </div>
+    </section>
+
+    <!-- 7. Valor da proposta -->
+    <section class="bg-slate-50/80 border border-slate-200 rounded-2xl p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-sm">7</span>
+        <h2 class="text-lg font-bold text-slate-900">Valor da proposta</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+          <div class="flex items-center gap-2 font-bold text-xs text-slate-900 mb-1">
+            <i data-lucide="network" class="w-4 h-4 text-teal-700"></i>
+            <span>Visão integrada do ecossistema</span>
+          </div>
+          <p class="text-xs text-slate-600">Compreender como sistemas, pessoas e processos se relacionam na operação diária.</p>
+        </div>
+
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+          <div class="flex items-center gap-2 font-bold text-xs text-slate-900 mb-1">
+            <i data-lucide="search" class="w-4 h-4 text-teal-700"></i>
+            <span>Identificação de causas-raiz</span>
+          </div>
+          <p class="text-xs text-slate-600">Tornar visíveis gargalos e retrabalhos ocultos em análises de sistemas isolados.</p>
+        </div>
+
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+          <div class="flex items-center gap-2 font-bold text-xs text-slate-900 mb-1">
+            <i data-lucide="compass" class="w-4 h-4 text-teal-700"></i>
+            <span>Apoio à decisão gerencial</span>
+          </div>
+          <p class="text-xs text-slate-600">Informações estruturadas para guiar uso, integração, melhoria e evolução tecnológica.</p>
+        </div>
+
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+          <div class="flex items-center gap-2 font-bold text-xs text-slate-900 mb-1">
+            <i data-lucide="target" class="w-4 h-4 text-teal-700"></i>
+            <span>Priorização de melhorias</span>
+          </div>
+          <p class="text-xs text-slate-600">Foco e investimentos direcionados aos problemas de maior impacto assistencial e financeiro.</p>
+        </div>
+
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+          <div class="flex items-center gap-2 font-bold text-xs text-slate-900 mb-1">
+            <i data-lucide="line-chart" class="w-4 h-4 text-teal-700"></i>
+            <span>Avaliação contínua de resultados</span>
+          </div>
+          <p class="text-xs text-slate-600">Métricas comparativas para comprovar se as intervenções geraram benefícios reais.</p>
+        </div>
+
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+          <div class="flex items-center gap-2 font-bold text-xs text-slate-900 mb-1">
+            <i data-lucide="heart-pulse" class="w-4 h-4 text-teal-700"></i>
+            <span>Tecnologia alinhada ao cuidado</span>
+          </div>
+          <p class="text-xs text-slate-600">Redução de etapas burocráticas para manter o foco profissional no cuidado ao paciente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objetivo Final -->
+    <footer class="bg-slate-900 text-white rounded-2xl p-6 md:p-8">
+      <div class="flex items-center gap-2 text-teal-400 text-xs font-bold uppercase tracking-wider mb-2">
+        <i data-lucide="flag" class="w-4 h-4"></i> Objetivo Final
+      </div>
+      <p class="text-xs md:text-sm text-slate-200 leading-relaxed">
+        Transformar a visão fragmentada das tecnologias hospitalares em uma compreensão integrada de como elas são utilizadas, quais problemas provocam ou ajudam a resolver e onde existem oportunidades de melhoria, apoiando uma gestão tecnológica mais eficiente, segura e orientada às necessidades reais do hospital.
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Inicialização dos ícones do Lucide
+    lucide.createIcons();
+  </script>
+</body>
+</html>
